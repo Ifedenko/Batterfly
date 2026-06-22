@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %} 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batterfly | Салон красоты</title>
+    <meta name="description" content="Салон красоты Batterfly — премиальный сервис в центре Москвы.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+         <a href="/" class="logo"> 
+            <i class="fas fa-butterfly logo__icon"></i>
+            <div class="logo__text">
+                <h1 class="logo__title">BATTERFLY</h1>
+                <span class="logo__subtitle">САЛОН КРАСОТЫ</span>
+            </div>
+        </a>
+        
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="/" class="nav__link nav__link">Главная</a></li>
+                <li><a href="/services/" class="nav__link">Услуги</a></li>
+                <li><a href="/masters/" class="nav__link">Мастера</a></li>
+                <li><a href="/portfolio/" class="nav__link">Портфолио</a></li>
+                <li><a href="/contacts/" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <a href="/contacts/" class="btn btn--header">
+            <i class="fas fa-phone-alt"></i> Запись
+        </a>
+    </div>
+</header>
+
+<main class="main">
+    <section class="hero">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <span class="hero__subtitle">Преображение начинается здесь</span>
+                <h2 class="hero__title">Раскройте <i class="hero__title-accent">крылья</i> своей красоты</h2>
+                <p class="hero__text">Batterfly — премиальный салон в центре города. Индивидуальный подход, ведущие стилисты и атмосфера полного релакса.</p>
+                <div class="hero__buttons">
+                    <a href="services.html" class="btn btn--primary">
+                        <i class="far fa-calendar-check"></i> Выбрать услугу
+                    </a>
+                    <a href="/portfolio/" class="btn btn--outline">Наши работы</a>
+                </div>
+            </div>
+            <div class="hero__image">
+                <img src="https://i.pinimg.com/736x/e6/a5/87/e6a58782869dc2958056843377bd4700.jpg" alt="Салон Batterfly">
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <div class="features__grid">
+                <div class="feature-card">
+                    <i class="fas fa-leaf feature-card__icon"></i>
+                    <h3 class="feature-card__title">Органика</h3>
+                    <p class="feature-card__text">Только премиальные бренды и натуральные составы</p>
+                </div>
+                <div class="feature-card">
+                    <i class="far fa-clock feature-card__icon"></i>
+                    <h3 class="feature-card__title">Забота о времени</h3>
+                    <p class="feature-card__text">Ценим каждую минуту, работаем по записи</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-crown feature-card__icon"></i>
+                    <h3 class="feature-card__title">Топ-мастера</h3>
+                    <p class="feature-card__text">Регулярное обучение у экспертов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="popular-services">
+        <div class="container">
+            <h2 class="section-title">Популярные услуги</h2>
+            <div class="services-preview">
+                <div class="service-card">
+                    <div class="service-card__image" style="background-image: url('https://i.pinimg.com/736x/59/b2/a3/59b2a37a416126eccf6cf7fe435666b4.jpg')"></div>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Стрижка и укладка</h3>
+                        <p class="service-card__description">Модельные стрижки, уход, стайлинг</p>
+                        <div class="service-card__price">от 2 500 ₽</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__image" style="background-image: url('https://i.pinimg.com/1200x/d0/c1/f8/d0c1f8c77ebc1550efb63ade443d60c4.jpg')"></div>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Окрашивание</h3>
+                        <p class="service-card__description">Airtouch, шатуш, колористика Wella</p>
+                        <div class="service-card__price">от 6 800 ₽</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__image" style="background-image: url('https://i.pinimg.com/736x/71/25/92/7125924f84da9fa4fc17a1ecc5b5cd69.jpg')"></div>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Маникюр / Педикюр</h3>
+                        <p class="service-card__description">Аппаратный, комби, покрытие Luxio</p>
+                        <div class="service-card__price">от 2 200 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="/services/" class="btn btn--primary">Смотреть все услуги →</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__copyright">
+            © 2026 Batterfly Салон красоты.
+        </div>
+        <div class="footer__social">
+            <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-vk"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="{% static 'main.js' %}"></script> 
+</body>
+</html>

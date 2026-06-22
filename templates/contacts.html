@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %} 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batterfly | Контакты и запись</title>
+    <meta name="description" content="Контакты салона Batterfly. Адрес, телефон, часы работы. Онлайн-запись.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}"> 
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+        <a href="/" class="logo"> 
+            <i class="fas fa-butterfly logo__icon"></i>
+            <div class="logo__text">
+                <h1 class="logo__title">BATTERFLY</h1>
+                <span class="logo__subtitle">САЛОН КРАСОТЫ</span>
+            </div>
+        </a>
+        
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="/" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="/services/" class="nav__link">Услуги</a></li>
+                <li class="nav__item"><a href="/masters/" class="nav__link">Мастера</a></li>
+                <li class="nav__item"><a href="/portfolio/" class="nav__link">Портфолио</a></li>
+                <li class="nav__item"><a href="/contacts/" class="nav__link nav__link--active">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <a href="/contacts/" class="btn btn--header"> 
+            <i class="fas fa-phone-alt"></i> Запись
+        </a>
+    </div>
+</header>
+
+<main class="main">
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Контакты</h1>
+            <p class="page-description">Мы всегда рады видеть вас в нашем салоне</p>
+        </div>
+    </section>
+    
+    <section class="contacts-section">
+        <div class="container">
+            <div class="contacts-wrapper">
+                <div class="contacts-info">
+                    <h3 class="contacts-info__title">Салон Batterfly</h3>
+                    
+                    <div class="contacts-info__item">
+                        <i class="fas fa-map-pin contacts-info__icon"></i>
+                        <div class="contacts-info__content">
+                            <strong>Адрес:</strong>
+                            <p>Златоуст, пр. Гагарина, 16</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts-info__item">
+                        <i class="fas fa-phone contacts-info__icon"></i>
+                        <div class="contacts-info__content">
+                            <strong>Телефон:</strong>
+                            <p><a href="tel:+79511234567">+7 (951) 123-45-67</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts-info__item">
+                        <i class="fas fa-envelope contacts-info__icon"></i>
+                        <div class="contacts-info__content">
+                            <strong>Email:</strong>
+                            <p><a href="mailto:welcome@batterfly.ru">welcome@batterfly.ru</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts-info__item">
+                        <i class="far fa-clock contacts-info__icon"></i>
+                        <div class="contacts-info__content">
+                            <strong>Часы работы:</strong>
+                            <p>Ежедневно с 10:00 до 20:00<br>Без выходных</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts-info__item">
+                        <i class="fas fa-wifi contacts-info__icon"></i>
+                        <div class="contacts-info__content">
+                            <strong>Удобства:</strong>
+                            <p>Бесплатный Wi-Fi<br>Кофе и напитки для гостей</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts-social">
+                        <p><strong>Мы в соцсетях:</strong></p>
+                        <div class="contacts-social__links">
+                            <a href="#" class="contacts-social__link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="contacts-social__link"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="contacts-social__link"><i class="fab fa-vk"></i></a>
+                            <a href="#" class="contacts-social__link"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contacts-form">
+                    <h3 class="contacts-form__title">Записаться онлайн</h3>
+                    <p class="contacts-form__subtitle">Оставьте заявку, и мы перезвоним вам в течение 15 минут</p>
+                    
+                    <form id="bookingForm" class="booking-form" method="POST">
+                        {% csrf_token %}
+
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div style="background-color: #d4edda; color: #155724; padding: 12px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #c3e6cb;">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Ваше имя" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" name="phone" class="form-control" placeholder="Телефон" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select name="service" class="form-control" required>
+                                <option value="">Выберите услугу</option>
+                                <option value="Стрижка и укладка">Стрижка и укладка</option>
+                                <option value="Окрашивание">Окрашивание</option>
+                                <option value="Маникюр / Педикюр">Маникюр / Педикюр</option>
+                                <option value="Косметология">Косметология</option>
+                                <option value="Макияж">Макияж</option>
+                                <option value="SPA и массаж">SPA и массаж</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select name="master" class="form-control">
+                                <option value="">Выберите мастера</option>
+                                <option value="София Алексеевна">София Алексеевна</option>
+                                <option value="Полина Кирилловна">Полина Кирилловна</option>
+                                <option value="Татьяна Алексеевна">Татьяна Алексеевна</option>
+                                <option value="Мария Александровна">Мария Александровна</option>
+                                <option value="Анна Викторовна">Анна Викторовна</option>
+                                <option value="Ксения Юрьевна">Ксения Юрьевна</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="date" name="date" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="comment" class="form-control" placeholder="Комментарий" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--block">Отправить заявку</button>
+                        
+                        <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="contacts-map">
+                <h3 class="contacts-map__title">Как нас найти</h3>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Яндекс.Карта</p>
+                    <p class="map-note">Златоуст, пр. Гагарина, 16</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__copyright">
+            © 2026 Batterfly Салон красоты.
+        </div>
+        <div class="footer__social">
+            <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-vk"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="{% static 'main.js' %}"></script>
+</body>
+</html>

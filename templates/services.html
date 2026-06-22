@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %} 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batterfly | Услуги и цены</title>
+    <meta name="description" content="Услуги салона Batterfly: стрижки, окрашивание, маникюр, косметология, макияж, SPA.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}"> 
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+        <a href="/" class="logo"></a> 
+            <i class="fas fa-butterfly logo__icon"></i>
+            <div class="logo__text">
+                <h1 class="logo__title">BATTERFLY</h1>
+                <span class="logo__subtitle">САЛОН КРАСОТЫ</span>
+            </div>
+        </a>
+        
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="/" class="nav__link">Главная</a></li>
+                <li><a href="/services/" class="nav__link nav__link--active">Услуги</a></li>
+                <li><a href="/masters/" class="nav__link">Мастера</a></li>
+                <li><a href="/portfolio/" class="nav__link">Портфолио</a></li>
+                <li><a href="/contacts/" class="nav__link">Контакты</a></li> 
+            </ul>
+        </nav>
+        
+        <a href="/contacts/" class="btn btn--header"> 
+            <i class="fas fa-phone-alt"></i> Запись
+        </a>
+    </div>
+</header>
+
+<main class="main">
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Услуги и цены</h1>
+            <p class="page-description">Профессиональный уход за вашей красотой</p>
+        </div>
+    </section>
+    
+    <section class="services-section">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card__image" style="background-image: url('https://i.pinimg.com/736x/59/b2/a3/59b2a37a416126eccf6cf7fe435666b4.jpg')"></div>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Стрижка и укладка</h3>
+                        <p class="service-card__description">Модельные стрижки любой сложности, уход за волосами, вечерние и свадебные укладки</p>
+                        <ul class="service-card__list">
+                            <li>Женская стрижка — от 2 500 ₽</li>
+                            <li>Тонирование — от 1 800 ₽</li>
+                            <li>Укладка — от 1 500 ₽</li>
+                        </ul>
+                        <div class="service-card__price">от 2 500 ₽</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__image" style="background-image: url('https://i.pinimg.com/1200x/d0/c1/f8/d0c1f8c77ebc1550efb63ade443d60c4.jpg')"></div>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Окрашивание</h3>
+                        <p class="service-card__description">Современные техники окрашивания, работа с профессиональными красителями Wella</p>
+                        <ul class="service-card__list">
+                            <li>Airtouch — от 8 500 ₽</li>
+                            <li>Шатуш — от 7 500 ₽</li>
+                            <li>Окрашивание в один тон — от 6 800 ₽</li>
+                        </ul>
+                        <div class="service-card__price">от 6 800 ₽</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__image" style="background-image: url('https://i.pinimg.com/736x/71/25/92/7125924f84da9fa4fc17a1ecc5b5cd69.jpg')"></div>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Маникюр и педикюр</h3>
+                        <p class="service-card__description">Аппаратный и комбинированный маникюр, покрытие гель-лаком Luxio</p>
+                        <ul class="service-card__list">
+                            <li>Маникюр с покрытием — от 2 200 ₽</li>
+                            <li>Педикюр с покрытием — от 2 800 ₽</li>
+                            <li>Дизайн ногтей — от 500 ₽</li>
+                        </ul>
+                        <div class="service-card__price">от 2 200 ₽</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__image" style="background-image: url('https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/2524303/wLOYRLnDwsUuyCLm5h5aJw.jpg')"></div>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Косметология</h3>
+                        <p class="service-card__description">Профессиональный уход за кожей лица, чистки, пилинги на косметике Holy Land</p>
+                        <ul class="service-card__list">
+                            <li>Чистка лица — от 3 900 ₽</li>
+                            <li>Пилинг — от 4 500 ₽</li>
+                            <li>Уходовые процедуры — от 5 000 ₽</li>
+                        </ul>
+                        <div class="service-card__price">от 3 900 ₽</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__image" style="background-image: url('https://i.pinimg.com/1200x/c7/88/5a/c7885a81a3fde7025d92f81f89eea580.jpg')"></div>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Макияж</h3>
+                        <p class="service-card__description">Дневной, вечерний, свадебный макияж с использованием премиальной косметики</p>
+                        <ul class="service-card__list">
+                            <li>Дневной макияж — от 3 200 ₽</li>
+                            <li>Вечерний макияж — от 4 500 ₽</li>
+                            <li>Свадебный образ — от 6 500 ₽</li>
+                        </ul>
+                        <div class="service-card__price">от 3 200 ₽</div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__image" style="background-image: url('https://i.pinimg.com/736x/c2/70/21/c27021e449da74597e017355ba98021b.jpg')"></div>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">SPA и массаж</h3>
+                        <p class="service-card__description">Расслабляющие программы для тела, массажи, обертывания, спа-ритуалы</p>
+                        <ul class="service-card__list">
+                            <li>Классический массаж — от 4 500 ₽</li>
+                            <li>Спа-программа — от 6 000 ₽</li>
+                            <li>Обертывание — от 3 500 ₽</li>
+                        </ul>
+                        <div class="service-card__price">от 4 500 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="/contacts/" class="btn btn--primary">">Записаться на услугу →</a>
+            </div>
+        </div> 
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__copyright">
+            © 2026 Batterfly Салон красоты.
+        </div>
+        <div class="footer__social">
+            <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-vk"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="{% static 'main.js' %}"></script> 
+</body>
+</html>

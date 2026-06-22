@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %} 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batterfly | Портфолио работ</title>
+    <meta name="description" content="Портфолио работ салона Batterfly: стрижки, окрашивание, макияж, маникюр.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}"> 
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+        <a href="/" class="logo"> 
+            <i class="fas fa-butterfly logo__icon"></i>
+            <div class="logo__text">
+                <h1 class="logo__title">BATTERFLY</h1>
+                <span class="logo__subtitle">САЛОН КРАСОТЫ</span>
+            </div>
+        </a>
+        
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="/" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="/services/" class="nav__link">Услуги</a></li>
+                <li class="nav__item"><a href="/masters/" class="nav__link">Мастера</a></li>
+                <li class="nav__item"><a href="/portfolio/" class="nav__link nav__link--active">Портфолио</a></li>
+                <li class="nav__item"><a href="/contacts/" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <a href="/contacts/" class="btn btn--header">
+            <i class="fas fa-phone-alt"></i> Запись
+        </a>
+    </div>
+</header>
+
+<main class="main">
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Наши работы</h1>
+            <p class="page-description">Вдохновляйтесь и приходите за своей красотой</p>
+        </div>
+    </section>
+    
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://i.pinimg.com/1200x/72/f3/b4/72f3b46dbd5d391283bf8d981f761ce6.jpg" alt="Стрижка">
+                    <div class="portfolio-item__overlay">
+                        <span class="portfolio-item__category">Стрижка каре</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://i.pinimg.com/736x/2f/e5/f6/2fe5f64a693db1358297b1ed42ab9a24.jpg" alt="Окрашивание">
+                    <div class="portfolio-item__overlay">
+                        <span class="portfolio-item__category">Окрашивание Airtouch</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://i.pinimg.com/736x/0c/3f/37/0c3f376fb970262e175a93ce87b8f849.jpg" alt="Укладка">
+                    <div class="portfolio-item__overlay">
+                        <span class="portfolio-item__category">Вечерняя укладка</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://i.pinimg.com/736x/21/09/8e/21098e3d4971236869d53aff2493c9f9.jpg" alt="Макияж">
+                    <div class="portfolio-item__overlay">
+                        <span class="portfolio-item__category">Свадебный макияж</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://i.pinimg.com/736x/57/a6/28/57a6280656503a54d9101540450ef264.jpg" alt="Маникюр">
+                    <div class="portfolio-item__overlay">
+                        <span class="portfolio-item__category">Френч маникюр</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://i.pinimg.com/736x/f2/97/6c/f2976ccd2a1c3651d5ddbb626196e114.jpg" alt="Окрашивание">
+                    <div class="portfolio-item__overlay">
+                        <span class="portfolio-item__category">Шатуш</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://i.pinimg.com/736x/44/82/cb/4482cb0812f384354d8247c88c7c0906.jpg" alt="Дизайн ногтей">
+                    <div class="portfolio-item__overlay">
+                        <span class="portfolio-item__category">Дизайн ногтей</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://i.pinimg.com/736x/10/d9/d1/10d9d155a2adbc1fbf0211c10eb90eb9.jpg" alt="Макияж">
+                    <div class="portfolio-item__overlay">
+                        <span class="portfolio-item__category">Вечерний макияж</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://i.pinimg.com/736x/98/d7/9e/98d79e9ef5074783b49d9edae14a82ba.jpg" alt="Косметология">
+                    <div class="portfolio-item__overlay">
+                        <span class="portfolio-item__category">Уход за кожей</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <a href="/contacts/" class="btn btn--primary">Записаться на услугу →</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__copyright">
+            © 2026 Batterfly Салон красоты.
+        </div>
+        <div class="footer__social">
+            <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-vk"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="{% static 'main.js' %}"></script> 
+</body>
+</html>

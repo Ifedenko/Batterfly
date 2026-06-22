@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %} 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batterfly | Наши мастера</title>
+    <meta name="description" content="Команда профессионалов салона Batterfly: стилисты, колористы, мастера маникюра.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}"> 
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+        <a href="/" class="logo"> 
+            <i class="fas fa-butterfly logo__icon"></i>
+            <div class="logo__text">
+                <h1 class="logo__title">BATTERFLY</h1>
+                <span class="logo__subtitle">САЛОН КРАСОТЫ</span>
+            </div>
+        </a>
+        
+        <nav class="nav">
+    <ul class="nav__list">
+        <li><a href="/" class="nav__link">Главная</a></li>
+        <li><a href="/services/" class="nav__link">Услуги</a></li>
+        <li><a href="/masters/" class="nav__link nav__link--active">Мастера</a></li>
+        <li><a href="/portfolio/" class="nav__link">Портфолио</a></li>
+        <li><a href="/contacts/" class="nav__link">Контакты</a></li>
+    </ul>
+</nav> 
+        
+        <a href="/contacts/" class="btn btn--header"> 
+            <i class="fas fa-phone-alt"></i> Запись
+        </a>
+    </div>
+</header>
+
+<main class="main">
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Наши мастера</h1>
+            <p class="page-description">Профессионалы, которые создают красоту</p>
+        </div>
+    </section>
+    
+    <section class="masters-section">
+        <div class="container">
+            <div class="masters-grid">
+                <div class="master-card">
+                    <div class="master-card__image" style="background-image: url('https://i.pinimg.com/736x/59/eb/93/59eb9328ce8be3745012001d5115c65e.jpg')"></div>
+                    <div class="master-card__content">
+                        <h3 class="master-card__name">София Алексеевна</h3>
+                        <p class="master-card__position">Топ-стилист, арт-директор</p>
+                        <p class="master-card__experience">Опыт: 12 лет</p>
+                        <p class="master-card__specialization">Сложные окрашивания, стрижки</p>
+                        <a href="contacts.html" class="btn btn--primary btn--small">Записаться</a>
+                    </div>
+                </div>
+                
+                <div class="master-card">
+                    <div class="master-card__image" style="background-image: url('https://i.pinimg.com/736x/2a/0b/55/2a0b556e707874d575d56d11c975085e.jpg')"></div>
+                    <div class="master-card__content">
+                        <h3 class="master-card__name">Полина Кирилловна</h3>
+                        <p class="master-card__position">Колорист-эксперт</p>
+                        <p class="master-card__experience">Опыт: 8 лет</p>
+                        <p class="master-card__specialization">Колористика, Airtouch, шатуш</p>
+                        <a href="/contacts/" class="btn btn--primary btn--small">Записаться</a>
+                    </div>
+                </div>
+                
+                <div class="master-card">
+                    <div class="master-card__image" style="background-image: url('https://i.pinimg.com/736x/62/1e/fd/621efd8cf396ab97daae3cf167c3b081.jpg')"></div>
+                    <div class="master-card__content">
+                        <h3 class="master-card__name">Татьяна Алексеевна</h3>
+                        <p class="master-card__position">Мастер ногтевого сервиса</p>
+                        <p class="master-card__experience">Опыт: 7 лет</p>
+                        <p class="master-card__specialization">Маникюр, педикюр, дизайн</p>
+                        <a href="/contacts/" class="btn btn--primary btn--small">Записаться</a>
+                    </div>
+                </div>
+                
+                <div class="master-card">
+                    <div class="master-card__image" style="background-image: url('https://i.pinimg.com/1200x/ae/f3/be/aef3be1403a6752f4ba948b627d38534.jpg')"></div>
+                    <div class="master-card__content">
+                        <h3 class="master-card__name">Мария Александровна</h3>
+                        <p class="master-card__position">Косметолог-эстетист</p>
+                        <p class="master-card__experience">Опыт: 10 лет</p>
+                        <p class="master-card__specialization">Уход за кожей, пилинги</p>
+                        <a href="/contacts/" class="btn btn--primary btn--small">Записаться</a>
+                    </div>
+                </div>
+                
+                <div class="master-card">
+                    <div class="master-card__image" style="background-image: url('https://i.pinimg.com/736x/24/88/df/2488df34509b9c06fe9798edfd771290.jpg')"></div>
+                    <div class="master-card__content">
+                        <h3 class="master-card__name">Анна Викторовна</h3>
+                        <p class="master-card__position">Визажист-стилист</p>
+                        <p class="master-card__experience">Опыт: 6 лет</p>
+                        <p class="master-card__specialization">Макияж любой сложности</p>
+                        <a href="/contacts/" class="btn btn--primary btn--small">Записаться</a>
+                    </div>
+                </div>
+                
+                <div class="master-card">
+                    <div class="master-card__image" style="background-image: url('https://i.pinimg.com/736x/b8/77/ae/b877aecc4efff6e00b8af5a17bea8ecc.jpg')"></div>
+                    <div class="master-card__content">
+                        <h3 class="master-card__name">Ксения Юрьевна</h3>
+                        <p class="master-card__position">Массажист, SPA-специалист</p>
+                        <p class="master-card__experience">Опыт: 9 лет</p>
+                        <p class="master-card__specialization">Массаж, SPA-процедуры</p>
+                        <a href="/contacts/" class="btn btn--primary btn--small">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__copyright">
+            © 2026 Batterfly Салон красоты.
+        </div>
+        <div class="footer__social">
+            <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-vk"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="{% static 'main.js' %}"></script> 
+</body>
+</html>
