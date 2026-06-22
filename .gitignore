@@ -2,8 +2,6 @@ venv/
 env/
 .venv/
 .env/
-*.sqlite3
-*.db
 media/
 staticfiles/
 __pycache__/
